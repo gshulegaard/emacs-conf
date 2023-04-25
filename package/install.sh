@@ -5,7 +5,7 @@
 #
 
 # version will be replaced by make during release
-VERSION="1.0.4"
+VERSION="1.0.5"
 STEP=" 0"
 DEPS="git curl python3 python3-setuptools python3-dev build-essential python3-pip"
 HOME=`echo ~`
