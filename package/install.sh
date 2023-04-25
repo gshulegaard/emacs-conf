@@ -10,7 +10,7 @@ STEP=" 0"
 DEPS="git curl python3 python3-setuptools python3-dev build-essential python3-pip"
 HOME=`echo ~`
 USER=`echo ~ | awk '{n = split($0, result, "/"); print result[n]}'`
-URL="https://github.com/gshulegaard/emacs-conf"
+URL="https://raw.githubusercontent.com/gshulegaard/emacs-conf"
 PACKAGE="emacs-conf-${VERSION}.tar.gz"
 
 #
@@ -253,7 +253,7 @@ incr_step
 printf "\033[32m ${step}. Downloading and installing emacs config ...\033[0m"
 
 check_downloader && \
-    ${downloader} ${downloader_opts} ${URL}/raw/v${VERSION}/release/${PACKAGE} > ${PACKAGE}
+    ${downloader} ${downloader_opts} ${URL}/v${VERSION}/release/${PACKAGE} > ${PACKAGE}
 
 rm -rf ${HOME}/.emacs.d/* > /dev/null 2>&1
 
