@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  dev:
+    platform: linux/x86_64
+    build:
+      context: ..
+      dockerfile: docker/dev.dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # mount external docker sock
+      - ..:/opt/my-emacs
+    tty: true
+    stdin_open: true

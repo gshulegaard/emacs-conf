@@ -1,0 +1,144 @@
+1.0.5 (20220425)
+----------------
+- Migrate from gitlab/my-emacs to github/emacs-conf.
+
+1.0.4 (20220424)
+----------------
+- Moved package management to straight.el.
+- Cleaned up configuration.
+- Adopted/integrated some basic configuration from NANO-emacs.
+- Updated installation scripts to reflect changes.
+- Moved development flow to docker (from vagrant+vbox).
+
+0.1.13 (20200220)
+-----------------
+- Added `C-iso-leftab` as a shortcut for expanding neotree.
+
+0.1.11 (20191217)
+-----------------
+- Added .tsx support using web-mode and TIDE.
+- Changed default indent level for typescript (4 -> 2).
+
+0.1.10 (20191201)
+-----------------
+- Added TypeScript support with TIDE.
+- Update to docs.
+- Improvements to install.sh.
+
+0.1.9 (20191112)
+----------------
+- Removed `elpy` due to configuration issues with python3.
+
+0.1.7 (20191025)
+----------------
+- Updated default Python interpreter to be python3.
+- Updated Python bindings (Flycheck, elpy) to use Python 3.
+- Updated some documentation to refer to `pip3` instead.
+
+0.1.1 (20180909)
+----------------
+- Moved user-setup.el to handle load path errors.
+- Added group:user anonomity to build `tar` command.
+- Added user detection to install script.
+- Added `chmod` step using new user detection.
+- Refactored changelog to now have version information.
+- Removed old releases.  Added automated old release removal to `make
+release`.
+
+0.1.0 (20180625)
+----------------
+- Refactor of makefile for better readability.
+- Some tweaks to build and release flows.
+- Replaced `autopair` with `smartparens`.
+- Incorporated elements from "http://tuhdo.github.io/c-ide.html".
+- Looked over "http://syamajala.github.io/c-ide.html" and moved `flycheck`
+hooks to `setup-ide.el`
+- Added hooks for `hs-minor-mode` for `c` and `python` -modes.
+- Renamed `package/requirements` > `package/requirements.txt`.
+- Removed "TOOD.md" as the items have largely been addressed.
+
+0.0.10 (20171208)
+-----------------
+- Refactor of Python setup from `old.py`.
+- Refactor of web setup from `old.py`.
+- Added `setup-ide.el` for generic packages that are usefull cross language.
+- Updated README with some temporary required setup.
+- Removed `old` since all of the customizations from it have now been 
+  refactored into this new format.
+
+20171207
+--------
+- Moved init.el to base directory so install instructions would autoload it.
+- Added 'Vagrantfile' for development and testing purposes.
+- Updated README with installation and vagrant instructions.
+
+20150228
+--------
+- Added instructions for adding neotree (from melpa).
+
+20151020
+--------
+- Added elpy for Python IDE capabilities.
+
+20150519
+--------
+- Added 'Requirements' section to take care of OS package requirements
+  before attempting installation of .emacs packages.
+
+20150220
+--------
+- Added '.hbs' extension to web-mode.
+
+20150220
+--------
+- Added '.jinja2' and '.pt' extension to web-mode.
+
+20141119
+--------
+- Turned off scroll-bar-mode globally.
+
+20141104
+--------
+- Turned off autopair-mode for web-mode.
+
+20141104
+--------
+- Added hs-minor-mode default.  M-X hs-hide-all, M-X hs-show-all, M-X
+  hs-show-block, M-X hs-hide-block are some useful commands for the
+  hs-minor-mode.
+
+20140903
+--------
+- Added web-mode.el and tried to tweak some settings.
+
+20140903
+--------
+- Added all Python editing packages and feautures as outlined by
+  emacs-for-python.pdf.
+
+20140902
+--------
+- Finally was able to change the colors of ansi-term to be readable using a dark
+  theme (e.g. Wombat).
+
+20140827
+--------
+- Reformatted the entire file to make more orginizational sense.
+- Removed blocking by source and instead added sources to this top comment block.
+
+20140821
+--------
+- Reworked basic formatting from Steffen's .emacs file to work with emacs24.
+- Moved these changes to "GSH Customization".
+- Added date-time config, but left it commented out due to performance issues.
+
+20140820
+--------
+- Added basic formatting from Steffen's .emacs file.
+- Also, started adding Python editing customizations from emacs-for-python.pdf.
+
+20140819
+--------
+- Changed default theme to Wombat and added MELPA package archve for easy
+  installation of some curated packages.
+
