@@ -10,13 +10,13 @@ README
 First download and run the install script:
 
 ```
-curl -L -O https://gitlab.com/gshulegaard/my-emacs/raw/master/package/install.sh  && sh install.sh
+curl -L -O https://github.com/gshulegaard/emacs-conf/raw/master/package/install.sh && sh install.sh
 ```
 
 or:
 
 ```
-wget https://gitlab.com/gshulegaard/my-emacs/raw/master/package/install.sh && sh install.sh
+wget https://github.com/gshulegaard/emacs-conf/raw/master/package/install.sh && sh install.sh
 ```
 
 This script will download the latest release package and unpack it into your
