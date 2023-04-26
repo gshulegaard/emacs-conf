@@ -22,7 +22,7 @@
 
 (global-linum-mode t)
 
-(defun my/disable-linum-hook ()
+(defun my/disable-linum-hook (_unused)
   (linum-mode -1))
 
 (add-hook 'term-mode-hook 'my/disable-linum-hook)
