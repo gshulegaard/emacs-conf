@@ -1,3 +1,7 @@
+1.0.7 (20220428)
+----------------
+- Add pyvenv setup for lsp completion.
+
 1.0.5 (20220425)
 ----------------
 - Migrate from gitlab/my-emacs to github/emacs-conf.
