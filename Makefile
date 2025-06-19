@@ -3,8 +3,7 @@ BUILD_NUM != cut -d "-" -f2 package/version
 NEW_BUILD_NUM != expr $(BUILD_NUM) + 1
 FILES = src/custom/ src/*.el package/requirements.txt package/version
 
-.PHONY: clean build release dev-rm dev-build dev install
-
+.PHONY: clean
 clean:
 	@printf "\033[33m Cleaning ...\033[0m"
 	@rm -rf build/*
@@ -12,6 +11,7 @@ clean:
 	@rm -f **/*~
 	@printf "\033[32m done.\033[0m\n"
 
+.PHONY: build
 build: clean
 	@printf "\n\033[33m Starting build ...\033[0m\n"
 	@printf "\033[33m Incrementing build number ...\033[0m"
@@ -32,6 +32,7 @@ build: clean
 	@printf "\033[32m done.\033[0m\n"
 	@printf "\033[32m Build complete.\033[0m\n"
 
+.PHONY: release
 release:
 	@printf "\n\033[33m Release start ...\033[0m\n"
 	@printf "\033[33m Git add package release/emacs-conf-$(VERSION).tar.gz ...\033[0m"
@@ -53,14 +54,18 @@ release:
 	@printf "\033[32m done.\033[0m\n"
 	@printf "\033[32m Release finished.\033[0m\n"
 
+.PHONY: dev-rm
 dev-rm:
 	@cd docker && docker-compose -f dev.compose.yaml rm -s -v -f;
 
+.PHONY: dev-build
 dev-build: dev-rm
 	@cd docker && docker-compose -f dev.compose.yaml build --no-cache;
 
+.PHONY: dev
 dev:
 	@cd docker && docker-compose -f dev.compose.yaml run dev;
 
+.PHONY: install
 install:
 	@mkdir -p ~/.emacs.d && cp -r src/* ~/.emacs.d;
