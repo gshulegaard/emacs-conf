@@ -19,7 +19,7 @@ build: clean
 	@printf "\033[32m done.\033[0m\n"
 	@$(eval FULL_VERSION := "$(VERSION)-$(NEW_BUILD_NUM)")
 	@printf "\033[33m Commit build $(FULL_VERSION) ...\033[0m"
-	@git commit -a -m "Build $(FULL_VERSION)" > /dev/null 2>&1
+	@git commit -a -m "Build $(FULL_VERSION)"
 	@git push > /dev/null 2>&1
 	@printf "\033[32m done.\033[0m\n"
 	@printf "\033[33m Creating build/emacs-conf-$(FULL_VERSION).tar.gz ...\033[0m"
