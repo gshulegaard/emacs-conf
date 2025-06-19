@@ -17,7 +17,7 @@ build: clean
 	@printf "\033[33m Incrementing build number ...\033[0m"
 	@sed -i.bak "s/-$(BUILD_NUM)/-$(NEW_BUILD_NUM)/" package/version && rm package/version.bak
 	@printf "\033[32m done.\033[0m\n"
-	@echo $(VERSION)-$(NEW_BUILD_NUM)
+	@echo $(VERSION)-$(BUILD_NUM)
 	@echo $(FILES)
 	@$(eval FULL_VERSION := "$(VERSION)-$(NEW_BUILD_NUM)")
 	@printf "\033[33m Commit build $(FULL_VERSION) ...\033[0m"
