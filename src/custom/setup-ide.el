@@ -37,7 +37,7 @@
 
 ;; disable linum for neotree
 (defun my/neotree-hook (_unused)
-  (linum-mode -1))
+  (display-line-numbers-mode 0))
 
 (add-hook 'neo-after-create-hook 'my/neotree-hook)
 

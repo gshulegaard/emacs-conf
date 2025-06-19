@@ -20,10 +20,10 @@
 
 ;;    Line Numbers...
 
-(global-linum-mode t)
+(global-display-line-numbers-mode 1)
 
-(defun my/disable-linum-hook (_unused)
-  (linum-mode -1))
+(defun my/disable-linum-hook ()
+  (display-line-numbers-mode 0))
 
 (add-hook 'term-mode-hook 'my/disable-linum-hook)
 (add-hook 'ansi-term-mode-hook 'my/disable-linum-hook)
