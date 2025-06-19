@@ -66,7 +66,7 @@
 ;;     AutoFillMode for specific major mode buffers is included (but commented
 ;;     out).
 
-(setq-default fill-column 80)
+(setq-default fill-column 88)
 (setq-default auto-fill-function 'do-auto-fill)
 (setq auto-fill-mode nil)
 
