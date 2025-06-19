@@ -1,5 +1,5 @@
-VERSION != eval cut -d "-" -f1 package/version
-BUILD_NUM != eval cut -d "-" -f2 package/version
+VERSION != eval $(cut -d "-" -f1 package/version)
+BUILD_NUM != eval $(cut -d "-" -f2 package/version)
 NEW_BUILD_NUM != expr $(BUILD_NUM) + 1
 FILES = src/custom/ src/*.el package/requirements.txt package/version
 
