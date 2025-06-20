@@ -1,4 +1,4 @@
-;;; package --- setup-ide: Configure basic IDE settings
+;;; package --- setup-python: Configure basic IDE settings
 
 ;;; Commentary:
 

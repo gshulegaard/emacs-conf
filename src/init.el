@@ -50,6 +50,10 @@
 
 (require 'setup-typescript)
 
+;;   Rust
+
+(require 'setup-rust)
+
 ;;   User extension file
 
 (require 'user-setup)
